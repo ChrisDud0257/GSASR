@@ -29,7 +29,7 @@ Interaction Block to output 2D Gaussians. These 2D Gaussians are then rendered i
 
 
 ## Fast Rasterization
-![SSG](./figures/sampling.png)
+![To be released.](./figures/sampling.png)
 Simply rendering an SR image by querying each pixel from all 2D Gaussians leads to a complexity of ___O(s<sup>2</sup>HWN)___, which is too high for high-resolution images.
 Actually, a Gaussian generally focuses on a limited area and its contribution to pixel values decays rapidly with the increase of distance.
 Therefore, we introduce a rasterization ratio ___r<1___ to control the rendering range of each Gaussian.
