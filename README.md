@@ -6,7 +6,7 @@ Arbitrary-scale Super-Resolution"
 
 > **Generalized and Efficient 2D Gaussian Splatting for
 Arbitrary-scale Super-Resolution** <br>
-> [Du CHEN\*](https://github.com/ChrisDud0257), [Liyi Chen\*](https://github.com/mt-cly), [Zhengqiang Zhang](https://github.com/xtudbxk) and [Lei ZHANG](https://www4.comp.polyu.edu.hk/~cslzhang/). <br>
+> [Du CHEN\*](https://github.com/ChrisDud0257), [Liyi CHEN\*](https://github.com/mt-cly), [Zhengqiang ZHANG](https://github.com/xtudbxk) and [Lei ZHANG](https://www4.comp.polyu.edu.hk/~cslzhang/). <br>
 
 
 
