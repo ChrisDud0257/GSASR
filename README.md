@@ -22,7 +22,7 @@ predict the corresponding image-conditioned Gaussians of the input low-resolutio
 to render super-resolved images by sampling discrete RGB values from the predicted contiguous Gaussians. Via end-to-end training, our optimized network, namely GSASR, can perform ASR for any image and unseen 
 scaling factors. Extensive experiments validate the effectiveness of our proposed method. 
 
-## Framework:
+## Framework
 ![framework](./figures/framework.png)
 In the training phase, an LR image is fed into the encoder to extract image features, conditioned on which the learnable Gaussian embeddings are passed through the Condition Injection Block and Gaussian
 Interaction Block to output 2D Gaussians. These 2D Gaussians are then rendered into an SR image of a specified resolution through differential rasterization.
@@ -44,11 +44,11 @@ The algorithm is described as follows,
 
 
 # 2.Quick Inference
-To be released.
+
 
 
 # 3.Training and Testing Code
-To be released.
+
 
 
 # 4.License
