@@ -44,7 +44,23 @@ The algorithm is described as follows,
 
 
 # 2.Quick Inference
-
+To be released.
 
 
 # 3.Training and Testing Code
+To be released.
+
+
+# 4.License
+This project is released under the Apache 2.0 license.
+
+# 5.Citation
+If you find this research helpful for you, please follow us by
+```bash
+@article{chen2025generalized,
+  title={Generalized and Efficient 2D Gaussian Splatting for Arbitrary-scale Super-Resolution},
+  author={Chen, Du and Chen, Liyi and Zhang, Zhengqiang and Zhang, Lei},
+  journal={arXiv preprint arXiv:2501.06838},
+  year={2025}
+}
+```
