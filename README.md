@@ -36,7 +36,7 @@ Therefore, we introduce a rasterization ratio ___r<1___ to control the rendering
 Specifically, we handle all Gaussians in parallel and only render the pixels that are close enough to the Gaussian centers, greatly reducing the computational complexity to ___O(r<sup>2</sup>s<sup>2</sup>HWN)___ and 
 making our algorithm practical. (___r___ is set to ___0.1___ in our implementation.)
 Note that our rasterization process is differential, which can be seamlessly integrated with neural networks for end-to-end optimization. This algorithm is implemented via ___CUDA C++___, which is GPU-friendly and 
-achieves faster speed and low memory requirements.
+achieves faster speed and low memory requirements. This algorithm is implemented via CUDA C++, which is GPU-friendly and achieves faster speed and low memory requirements.
 
 
 The algorithm is described as follows,
