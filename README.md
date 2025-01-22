@@ -56,7 +56,7 @@ The algorithm is described as follows,
 This project is released under the Apache 2.0 license.
 
 
-# 5. Acknowlegement
+# 5.Acknowlegement
 
 
 
