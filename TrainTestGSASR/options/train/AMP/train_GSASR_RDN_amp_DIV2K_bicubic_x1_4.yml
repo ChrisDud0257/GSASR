@@ -1,0 +1,162 @@
+# general settings
+name: GSASR_RDN_AMP_DIV2K_bicubic_x1-4
+model_type: GSASRAMPModel
+scale: 4
+num_gpu: auto  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+tile_size: 48
+tile_overlap: 8
+tile_process: True  ###Set it to True during training stage, so as to accelerate the validation speed
+crop_size: 4
+denominator: 12
+
+default_step_size: 1.2
+cuda_rendering: True
+mode: 'scale_modify'
+
+if_dmax: True
+dmax_mode: 'fix'
+dmax: 0.5
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: DIV2K
+    type: ContinuousBicubicDownsampleDataset
+    all_gt_list: ['/home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/DIV2K/trainHR_multiscaleHR_shortest512_subimages512']
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+    lr_size: 48
+    use_hflip: true
+    use_rot: true
+    sample_size: 0 #48*48, set to 0 for full GT image input
+    scale_list: [1.0, 4.0]
+
+    # data loader
+    num_worker_per_gpu: 8
+    batch_size_per_gpu: 16
+    dataset_enlarge_ratio: 10
+    prefetch_mode: ~
+
+    round_mode: 'round'
+
+  val:
+    name: DIV2K100
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x4/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x4/LR
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: RDNNOUP
+  G0: 64
+  kSize: 3
+  r: 4
+  n_colors: 3
+  RDNconfig: 'B'
+  no_upsampling: True
+  img_range: 1.0
+
+network_fea2gs:
+  type: Fea2GS_ROPE_AMP
+  inchannel: 64
+  channel: 192
+  num_heads: 6
+  num_crossattn_blocks: 2
+  num_crossattn_layers: 2
+  num_selfattn_blocks: 6
+  num_selfattn_layers: 6
+  num_gs_seed: 144
+  gs_up_factor: 1.0
+  window_size: 12
+  img_range: 1.0
+  shuffle_scale1: 2
+  shuffle_scale2: 2
+  rope_mixed: True
+  rope_theta: 10.0
+
+# path
+path:
+  pretrain_network_g: ~ 
+  strict_load_g: False
+  resume_state: ~
+  param_key_g: params
+
+path_fea2gs:
+  pretrain_network_fea2gs: ~ 
+  strict_load_fea2gs: True
+  resume_state: ~
+  param_key_fea2gs: params
+
+
+# training settings
+train:
+  clip_grad_norm: False
+  ema_decay: 0.999
+  optim_g:
+    type: Adam
+    lr: !!float 2e-4
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  optim_fea2gs:
+    type: Adam
+    lr: !!float 2e-4
+    weight_decay: 0
+    betas: [ 0.9, 0.99 ]
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [250000, 400000, 450000, 475000]
+    gamma: 0.5
+
+  total_iter: 500000
+  warmup_iter: 2000  # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+# validation settings
+val:
+  val_freq: !!float 1e4
+  save_img: False
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: True
+    ssim: # metric name
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: True
+    lpips:
+      type: calculate_lpips
+      crop_border: 4
+      better: lower
+    dists:
+      type: calculate_dists
+      crop_border: 4
+      better: lower
+
+# logging settings
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 1e4
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

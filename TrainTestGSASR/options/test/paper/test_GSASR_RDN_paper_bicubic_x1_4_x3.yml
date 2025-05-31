@@ -1,0 +1,139 @@
+name: GSASR_RDN_paper_bicubic_x1-4_x3
+model_type: GSASRModel
+scale: 3
+num_gpu: auto  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+tile_size: 48
+tile_overlap: 8
+tile_process: False  ### Set it to False unless the scaling factor is 2
+crop_size: 4
+denominator: 12
+
+default_step_size: 1.2
+cuda_rendering: True
+mode: 'scale_modify'
+
+if_dmax: True
+dmax_mode: 'fix'
+dmax: 0.1
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Set5/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Set5/x3/LR
+    io_backend:
+      type: disk
+  test_2:  # the 2nd test dataset
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Set14/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Set14/x3/LR
+    io_backend:
+      type: disk
+  test_3:
+    name: DIV2K100
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x3/LR
+#    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+  test_4:
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Urban100/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Urban100/x3/LR
+    io_backend:
+      type: disk
+  test_5:
+    name: BSDS100
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/BSDS100/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/BSDS100/x3/LR
+    io_backend:
+      type: disk
+  test_6:
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Manga109/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/Manga109/x3/LR
+    io_backend:
+      type: disk
+  test_7:
+    name: General100
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/General100/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/General100/x3/LR
+    io_backend:
+      type: disk
+  test_8:
+    name: LSDIR_val1
+    type: PairedImageDataset
+    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/LSDIR_val1/x3/GT
+    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/LSDIR_val1/x3/LR
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: RDNNOUP
+  G0: 64
+  kSize: 3
+  r: 4
+  n_colors: 3
+  RDNconfig: 'B'
+  no_upsampling: True
+  img_range: 1.0
+
+network_fea2gs:
+  type: Fea2GS
+  inchannel: 64
+  channel: 180
+  num_heads: 6
+  num_crossattn_blocks: 1
+  num_crossattn_layers: 2
+  num_selfattn_blocks: 6
+  num_selfattn_layers: 6
+  num_gs_seed: 144
+  gs_up_factor: 1.0
+  window_size: 12
+  img_range: 1.0
+  shuffle_scale1: 2
+  shuffle_scale2: 2
+
+# path
+path:
+  # pretrain_network_g: experiments/GSASR_RDN_paper_bicubic_x1-4/models/net_g_500000.pth
+  pretrain_network_g: /home/notebook/code/personal/S9053766/chendu/FinalUpload/GSASR/pretrained_models/Paper/RDN/net_g.pth
+  strict_load_g: True
+  param_key_g: params_ema
+
+path_fea2gs:
+  # pretrain_network_fea2gs: experiments/GSASR_RDN_paper_bicubic_x1-4/models/net_fea2gs_500000.pth
+  pretrain_network_fea2gs: /home/notebook/code/personal/S9053766/chendu/FinalUpload/GSASR/pretrained_models/Paper/RDN/net_fea2gs.pth
+  strict_load_fea2gs: True
+  param_key_fea2gs: params_ema
+
+# validation settings
+val:
+  save_img: True
+  suffix: 'GSASRRDNbicubicx3'  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 3
+      test_y_channel: True
+    ssim:
+      type: calculate_ssim
+      crop_border: 3
+      test_y_channel: True
+    lpips:
+      type: calculate_lpips
+      crop_border: 3
+    dists:
+      type: calculate_dists
+      crop_border: 3
