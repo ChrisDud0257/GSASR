@@ -450,9 +450,9 @@ Please note that, for HAT-L encoder, we just train it on SA1B.
 
 Please download the models from the following link,
 
-|           Models           |lDowload| Version|
-|:------------------------:|:---:|:---:|
-|HATL-SA1B|[Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing)|Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
+|           Models           |                                               Download                                               | Version|
+|:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|
+|HATL-SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing) |Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
 
 ## 4.1 Installation
  - python == 3.10
