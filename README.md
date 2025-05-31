@@ -172,11 +172,11 @@ Please note that, in paper, for each kind of encoder, we only train it on DIV2K.
 
 Please download the models from the following link,
 
-|           Models           |lDowload| Version|
-|:------------------------:|:---:|:---:|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing)|Paper|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing)|Paper|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing)|Paper|
+|           Models           |                                               Download                                               | Version|
+|:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing) |Paper|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing) |Paper|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing) |Paper|
 
 ## 2.1 Installation
  - python == 3.10
@@ -300,14 +300,14 @@ Please note that, for each kind of encoder, we provide two different versions of
 
 Please download the models from the following link,
 
-|           Models           |lDowload| Version|
-|:------------------------:|:---:|:---:|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|EDSR-Baseline-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
+|           Models           |                                               Download                                               | Version|
+|:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|EDSR-Baseline-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
 
 ## 3.1 Installation
  - python == 3.10

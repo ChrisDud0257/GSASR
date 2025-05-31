@@ -29,18 +29,18 @@ For more installation issues, please refer to the excellent [BasicSR](https://gi
 
 ## 2. Pretrained models
 
-|           Models           |lDowload| Version|
-|:------------------------:|:---:|:---:|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing)|Paper|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing)|Paper|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing)|Paper|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|EDSR-Baseline-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|HATL-SA1B|[Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing)|Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
+|           Models           |                                               Download                                               | Version|
+|:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing) |Paper|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing) |Paper|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing) |Paper|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|EDSR-Baseline-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|HATL-SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing) |Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
 
 
 ## 3. Training GSASR
@@ -200,18 +200,18 @@ To prepare the validation/test dataset, please follow this [instruction](dataset
 
 ## 1. Pretrained models
 
-|           Models           |lDowload| Version|
-|:------------------------:|:---:|:---:|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing)|Paper|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing)|Paper|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing)|Paper|
-|EDSR-Baseline-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|EDSR-Baseline-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|RDN-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DIV2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DF2K|[Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing)|Enhanced (AMP+Flash Attention)|
-|HATL-SA1B|[Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing)|Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
+|           Models           |                                               Download                                               | Version|
+|:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing) |Paper|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing) |Paper|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing) |Paper|
+|EDSR-Baseline-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|EDSR-Baseline-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|RDN-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|HATL-SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing) |Ultra Performance (AMP+Flash Attention+HATL Encoder + Training on SA1B)|
 
 
 
