@@ -162,6 +162,8 @@ def rendering_cuda_dmax(sigma_x, sigma_y, rho, coords, colours_with_alpha, sr_si
     return final_image
 ```
 
+Please note that, in the code above, ```dmax``` means the rasterization ratio r in the paper.
+
 You could also find it [here](TrainTestGSASR/basicsr/utils/gaussian_splatting.py). The CUDA operator could be fould [here](TrainTestGSASR/basicsr/utils/gs_cuda_dmax/gswrapper.cpp).
 
 We strongly recommend you to utilize CUDA-based rasterization since it's very efficient!
