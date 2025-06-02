@@ -50,7 +50,7 @@ The algorithm is described as follows,
 ![Algorithm](./figures/algorithm.png)
 
 
-All of the pretrained models, the datasets can be access by the following link,
+All of the pretrained models, the datasets can be accessed by the following link,
 
 |Project|                                               Download                                                |
 |:----:|:-----------------------------------------------------------------------------------------------------:|
@@ -292,11 +292,11 @@ Please use the same instructions in Section 2.3, which supports for any kinds of
 
 # 3.Quick Inference - AMP (Enhanced version of GSASR. Models are trained with Automatic Mixed Precision and Flash Attention, please find the details in our supplementary materials)
 
-To further accelerate the inference speed, lower the GPU memory and improve the performance, we substitute the vanilla self attention with [Flash Attention](https://docs.pytorch.org/docs/2.0/generated/torch.nn.functional.scaled_dot_product_attention.html?highlight=scaled_dot_product_attention#torch.nn.functional.scaled_dot_product_attention). To support the Flash Attention, we substitute the relative position embedding (RPE) with [rotary position embedding (ROPE)](https://github.com/naver-ai/rope-vit). We further utilize Automatic Mixed Precision (AMP) strategy, through combining bfloat16 and fp32 precision in our training and inference stage to accelerate the speed and lower the GPU memory.
+To further accelerate the inference speed, lower the GPU memory and improve the performance, we substitute the vanilla self attention with [Flash Attention](https://docs.pytorch.org/docs/2.0/generated/torch.nn.functional.scaled_dot_product_attention.html?highlight=scaled_dot_product_attention#torch.nn.functional.scaled_dot_product_attention). To support the calculation of position embedding in Flash Attention, we substitute the relative position embedding (RPE) with [rotary position embedding (ROPE)](https://github.com/naver-ai/rope-vit). We further utilize Automatic Mixed Precision (AMP) strategy, through combining bfloat16 and fp32 precision in our training and inference stage to accelerate the speed and lower the GPU memory.
 
 Please note that, in ROPE, the channel dimension of each attention head must be divisible by 4, thus we set the channel dimension of Gaussian embedding to 192, while the number of heads still keeps 6, then the channel dimension of each attention head is 32, which could be divisible by 4. 
 
-Please note that, for each kind of encoder, we provide two different versions of models, one is trained with DIV2K, while the other is trained with DF2K (DIV2K+FLICKR2K).
+Please note that, for each kind of encoder, we provide two different versions of models, one is trained with DIV2K, while the other is trained with DF2K (DIV2K+Flickr2K).
 
 **Please note that, Flash Attention, bfloat16 precision are only supported by some specific GPUs. If you encounter an error during the program execution, please don't use "--AMP_test" command.**
 
@@ -446,7 +446,7 @@ Please note that, in ROPE, the channel dimension of each attention head must be 
 
 Please note that, for HAT-L encoder, we just train it on SA1B.
 
-**Please note that, HAT-L are firstly pretrained on ImageNet for 800000 iterations, and then it is fine-tuned with DF2K for another 250000 iteration. The computational cost is too heavy, we just train GSASR-HATL totally from scratch for 500000 iterations, there is no pre-training or fine-tuning stage. Therefore, directly comparing GSASR-HATL with the original HAT-L models are unfair.**
+**Please note that, the original [HAT-L]((https://github.com/XPixelGroup/HAT)) with pixel-shuffle up-sampling layers are firstly pretrained on ImageNet for 800000 iterations, and then it is fine-tuned with DF2K for another 250000 iteration. Considering the computational cost is too heavy, we just train GSASR-HATL totally from scratch for 500000 iterations, there is no pre-training or fine-tuning stage. Therefore, directly comparing GSASR-HATL with the original HAT-L models are unfair.**
 
 **Please note that, Flash Attention, bfloat16 precision are only supported by some specific GPUs. If you encounter an error during the program execution, please don't use "--AMP_test" command.**
 
@@ -598,17 +598,28 @@ Please note that, when calculating PSNR/SSIM, we test them on Y channel of Ycbcr
 Please note that, when calculating PSNR/SSIM/LPIPS/DISTS, if the scaling factor is not larger than 8, we set "crop_border = scaling factor", else, we set "crop_border = 8".
 
 
-# 8.License
+# 8.Limitations
+
+GSASR also has some limitations,
+ - GSASR needs large number of parameters to transfer deep feature into valid Gaussian representation, that is to say, the number of parameters in Gaussian decoder is large, while there is no parameter in rendering operation.
+ - More numbers of Gaussians lead to better performance, but this will lower the computational efficiency.
+ - 2D Gaussians are equipped with powerful representation capability, if the training data is not enough, GSASR might overfit on it.
+ - GSASR shows no obvious advantages on smoothing images, especially on anime datasets, such as Manga109. 2D Gaussian is a centrally peaked, continuous function that decays symmetrically on both sides. Due to its 
+relatively small variance, it forms a sharp, non-stationary distribution. This characteristic leads to inferior performance in color-uniform and texture-smooth regions, while yielding superior results in areas with complex textures — as demonstrated on the Urban100 dataset.
+
+Overcoming these challenges is crucial, and we encourage active research in this direction to promote the future growth and applicability of 2D Gaussian Splatting.
+
+# 9.License
 This project is released under the Apache 2.0 license.
 
 
-# 9.Acknowlegement
+# 10.Acknowlegement
 
 This project is built mainly based on the excellent [BasicSR](https://github.com/XPixelGroup/BasicSR), [HAT](https://github.com/XPixelGroup/HAT) and [ROPE-ViT](https://github.com/naver-ai/rope-vit) codeframe. We appreciate it a lot for their developers.
 
 We sincerely thank [Mr.Zhengqiang Zhang](https://github.com/xtudbxk) for his support in the CUDA operator of rasterization.
 
-# 10.Citation
+# 11.Citation
 If you find this research helpful for you, please follow us by
 ```bash
 @article{chen2025generalized,
