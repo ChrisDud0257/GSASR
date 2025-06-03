@@ -309,7 +309,7 @@ Please download the models from the following link,
 |RDN-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing) |Enhanced (AMP+Flash Attention)|
 |RDN-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing) |Enhanced (AMP+Flash Attention)|
 |SwinIR-Train-with-DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
-|SwinIR-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+Flash Attention)|
+|SwinIR-Train-with-DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing) |Enhanced (AMP+Flash Attention)|
 
 ## 3.1 Installation
  - python == 3.10
