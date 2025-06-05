@@ -40,7 +40,7 @@ We provide **models** of varying-scale encoder for GSASR:
 |SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
 |HATL-SA1B| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
 
-Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost. While in our paper report, we does not using these tricks for fair comparison, please refer to [paper-results-on-benchmarks](#paper-results-on-benchmarks).
+Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. In our paper report, we does not using these tricks for fair comparison, please refer to [paper results on benchmarks](#📏-paper-results-on-benchmarks).
 
 ## 🔧 Usage
 
@@ -95,9 +95,9 @@ Download models from the following link.
 
 |           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
 |:------------------------:|:---:|:----------------------------------------------------------------------------------------------------:|:---:|
-|EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper|
-|RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper|
-|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper|
+|EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper Reported|
+|RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper Reported|
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper Reported|
 
 
 ### Inference for single image
