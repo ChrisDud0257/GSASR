@@ -30,17 +30,17 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 We provide **models** of varying-scale encoder for GSASR:
 
-|           Models           |        Training Dataset|                                       Download                                               | Version|
+|           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
-|EDSR-Baseline-Train-with-DIV2K| DIV2K | [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|EDSR-Baseline-Train-with-DF2K| DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|RDN-Train-with-DIV2K| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|RDN-Train-with-DF2K| DF2K|  [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|SwinIR-Train-with-DIV2K| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|SwinIR-Train-with-DF2K| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing) |Enhanced (AMP+ROPE+Flash Attention)|
-|HATL-SA1B| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing) |Ultra Performance (AMP+ROPE+Flash Attention)|
+|EDSR| DIV2K | [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/EDSR_DIV2K)|Enhanced |
+|EDSR| DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/EDSR_DF2K) |Enhanced |
+|RDN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/RDN_DIV2K) |Enhanced|
+|RDN| DF2K|  [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/RDN_DF2K) |Enhanced |
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DIV2K) |Enhanced |
+|SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
+|HATL-SA1B| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
 
-Please note that these models use AMP+ROPE+Flash Attention to reduce memory and time cost. While in our paper report, we does not using these tricks for fair comparison, please refer to [paper-results-on-benchmarks](#paper-results-on-benchmarks).
+Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost. While in our paper report, we does not using these tricks for fair comparison, please refer to [paper-results-on-benchmarks](#paper-results-on-benchmarks).
 
 ## 🔧 Usage
 
@@ -93,11 +93,11 @@ Besides {EDSR, RDN}-based GSASR present in paper, here we provide Swin-based GSA
 ### Pre-trained Models
 Download models from the following link.
 
-|           Models           |  Training Dataset |                                             Download                                               | Version|
+|           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
 |:------------------------:|:---:|:----------------------------------------------------------------------------------------------------:|:---:|
-|EDSR-Baseline-Train-with-DIV2K|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing) |Paper|
-|RDN-Train-with-DIV2K|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing) |Paper|
-|SwinIR-Train-with-DIV2K| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing) |Paper|
+|EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper|
+|RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper|
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper|
 
 
 ### Inference for single image
