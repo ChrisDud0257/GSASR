@@ -8,24 +8,25 @@
 <br>
 *Equal contribution &dagger;Corresponding author &emsp; 
 
-<a href="https://arxiv.org/abs/2501.06838"><img src='https://img.shields.io/badge/arXiv-GSASR-red' alt='Paper PDF'></a>
-<a href='https://mt-cly.github.io/GSASR.github.io/'><img src='https://img.shields.io/badge/Project_Page-GSASR-green' alt='Project Page'></a>
-<a href='https://huggingface.co/spaces/mutou0308/GSASR'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue'></a>
+<a href="https://arxiv.org/abs/2501.06838"><img src="https://img.shields.io/badge/%F0%9F%93%84%20arXiv-2501.06-B31B1B.svg"></a>
+<a href="https://mt-cly.github.io/GSASR.github.io/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project%20Page-GASAR-green.svg" alt='Project Page'></a>
+<a href="https://huggingface.co/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>
+<a href="https://huggingface.co/spaces/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Gradio%20Demo-Huggingface-blue"></a>
 
 </div>
 
 This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by representing given LR image as millions of continuous 2D Gaussians.  
 
-![Fast Rasterization](./figures/sampling.png)
+![Fast Rasterization](./assets/sampling.png)
 
 
-## News
+## 🎉  News
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
 - **2025-05-30:** The {EDSR, RDN, Swin, HATL}-based GSASR models are available.
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
 
 
-## Pre-trained Models
+## ⚙️  Pre-trained Models
 
 We provide **models** of varying-scale encoder for GSASR:
 
@@ -41,7 +42,7 @@ We provide **models** of varying-scale encoder for GSASR:
 
 Please note that these models use AMP+ROPE+Flash Attention to reduce memory and time cost. While in our paper report, we does not using these tricks for fair comparison, please refer to [paper-results-on-benchmarks](#paper-results-on-benchmarks).
 
-## Usage
+## 🔧 Usage
 
 ### Prepraration
 
@@ -51,6 +52,7 @@ cd GSASR
 conda create --name gsasr python=3.10
 conda activate gsasr
 pip install -r requirements.txt
+pip install -e . # build gscuda
 ```
 
 
@@ -65,9 +67,14 @@ You need to properly authenticate with Hugging Face to download our model weight
 huggingface-cli login
 ```
 
-You can try GSASR easily by runing in command or lanching gradio demo. 
+You can try GSASR easily by lanching gradio demo or runing in command. 
 
-### :computer: CLI
+### 🚀 Gradio demo
+```bash
+python demo_gr.py
+```
+
+### 💻 CLI
 ```bash
 python inference.py \
     --input_img_path <path_to_img> \
@@ -77,13 +84,8 @@ python inference.py \
 ```
 using `--tile_process` and `--AMP_test` if memory is limited.
 
-### :rocket: Gradio demo
-```bash
-python demo_gr.py
-```
 
-
-## Paper Results on Benchmarks
+## 📏 Paper Results on Benchmarks
 
 Please note that, in our paper, we only train GSASR on DIV2K wihtout AMP+RoPE+Flash Attention tricks for fair comparison. 
 Besides {EDSR, RDN}-based GSASR present in paper, here we provide Swin-based GSASR model. 
@@ -168,13 +170,13 @@ Please follow this [instruction](TrainTestGSASR/README.md) to train GSASR.
 This project is released under the Apache 2.0 license.
 
 
-# 10.Acknowlegement
+# Acknowlegement
 
 This project is built mainly based on the excellent [BasicSR](https://github.com/XPixelGroup/BasicSR), [HAT](https://github.com/XPixelGroup/HAT) and [ROPE-ViT](https://github.com/naver-ai/rope-vit) codeframe. We appreciate it a lot for their developers.
 
 We sincerely thank [Mr.Zhengqiang Zhang](https://github.com/xtudbxk) for his support in the CUDA operator of rasterization.
 
-# 11.Citation
+# 📚 Citation
 If you find this research helpful for you, please cite our paper.
 ```bash
 @article{chen2025generalized,
