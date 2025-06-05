@@ -22,7 +22,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ## 🎉  News
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
-- **2025-05-30:** The {EDSR, RDN, Swin, HATL}-based GSASR models are available.
+- **2025-05-30:** The {EDSR, RDN, SWIN, HATL}-based GSASR models are available.
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
 
 
@@ -90,7 +90,7 @@ using `--tile_process` and `--AMP_test` if memory is limited.
 Please note that, in our paper, we only train GSASR on DIV2K wihtout AMP+RoPE+Flash Attention tricks for fair comparison. 
 Besides {EDSR, RDN}-based GSASR present in paper, here we provide Swin-based GSASR model. 
 
-### Pre-trained Models
+### Pre-trained models
 Download models from the following link.
 
 |           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
