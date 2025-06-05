@@ -1,0 +1,12 @@
+torch==2.5.1 --index-url https://download.pytorch.org/whl/cu124
+torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu124
+torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
+# gradio==5.32.0
+gradio==5.23.0
+huggingface-hub==0.32.3
+pillow==11.2.1
+numpy==1.23.0
+einops==0.8.1
+opencv-python==4.11.0.86
+pydantic==2.10.6
+# dist/gscuda-0.0.0-cp310-cp310-linux_x86_64.whl
