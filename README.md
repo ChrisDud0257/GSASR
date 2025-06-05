@@ -166,17 +166,17 @@ Please follow this [instruction](TrainTestGSASR/README.md) to train GSASR.
 
 
 
-# License
+## License
 This project is released under the Apache 2.0 license.
 
 
-# Acknowlegement
+## Acknowlegement
 
 This project is built mainly based on the excellent [BasicSR](https://github.com/XPixelGroup/BasicSR), [HAT](https://github.com/XPixelGroup/HAT) and [ROPE-ViT](https://github.com/naver-ai/rope-vit) codeframe. We appreciate it a lot for their developers.
 
 We sincerely thank [Mr.Zhengqiang Zhang](https://github.com/xtudbxk) for his support in the CUDA operator of rasterization.
 
-# 📚 Citation
+## 📚 Citation
 If you find this research helpful for you, please cite our paper.
 ```bash
 @article{chen2025generalized,
