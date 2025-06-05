@@ -114,8 +114,7 @@ python inference_paper.py \
 
 
 ### Inference on DIV2K benchmark
-
-Download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
+To get the numerical performance in Tab.2 of paper. Please download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
 
 |Dataset|Download|
 |:--:|:--:|
@@ -154,7 +153,7 @@ python TrainTestGSASR/scripts/metrics/calculate_dists.py  --gt <path_to_GT_folde
 ```
 Please note that we test them on Y channel of Ycbcr space with `--test_y_channel`  when calculating PSNR/SSIM. When calculating PSNR/SSIM/LPIPS/DISTS,  we set `crop_border=${scale}` if the scaling factor is not larger than 8, otherwise `crop_border=8`.
 
-## Training
+## 🗝️ Training
 
 ### Dataset preparation
 
@@ -166,11 +165,7 @@ Please follow this [instruction](TrainTestGSASR/README.md) to train GSASR.
 
 
 
-## License
-This project is released under the Apache 2.0 license.
-
-
-## Acknowlegement
+## 🙏 Acknowlegement
 
 This project is built mainly based on the excellent [BasicSR](https://github.com/XPixelGroup/BasicSR), [HAT](https://github.com/XPixelGroup/HAT) and [ROPE-ViT](https://github.com/naver-ai/rope-vit) codeframe. We appreciate it a lot for their developers.
 
