@@ -52,18 +52,12 @@ Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE
 
 Firstly, please make sure you have installed [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)! Since we have hand-crafted CUDA operators, you need to compile them when you run GSASR.
 
-Then, export the CUDA path in your terminal, for me, I do it like this:
-
-```bash
-export CUDA_HOME=/data0/chendu/cuda-11.8
-```
-
-
 ```bash
 git clone https://github.com/ChrisDud0257/GSASR
 cd GSASR/TrainTestGSASR
 conda create --name gsasr python=3.10
 conda activate gsasr
+export CUDA_HOME=[path to your CUDA path] ### For me, I do it like this: export CUDA_HOME=/data0/chendu/cuda-11.8
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 BASICSR_EXT=True python setup.py develop
