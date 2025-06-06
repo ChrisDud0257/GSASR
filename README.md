@@ -55,7 +55,7 @@ Firstly, please make sure you have installed [CUDA Toolkit](https://developer.nv
 Then, export the CUDA path in your terminal, for me, I do it like this:
 
 ```bash
-export CUDA_HOME=/data0/chendu/cuda-11.7
+export CUDA_HOME=/data0/chendu/cuda-11.8
 ```
 
 
