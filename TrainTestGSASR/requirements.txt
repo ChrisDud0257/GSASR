@@ -34,3 +34,6 @@ fvcore
 pytorch-msssim
 pandas
 torchinfo
+gradio
+huggingface-hub==0.32.3
+pydantic
