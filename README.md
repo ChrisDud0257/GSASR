@@ -26,7 +26,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
 
 
-## ⚙️  Pre-trained Models
+## ⚙️  Pre-trained Models (Enhanced and Ultra Perfornmance Version)
 
 We provide **models** of varying-scale encoder for GSASR:
 
@@ -88,16 +88,16 @@ using `--tile_process` and `--AMP_test` if memory is limited.
 ## 📏 Paper Results on Benchmarks
 
 Please note that, in our paper, we only train GSASR on DIV2K wihtout AMP+RoPE+Flash Attention tricks for fair comparison. 
-Besides {EDSR, RDN}-based GSASR present in paper, here we provide Swin-based GSASR model. 
+Besides {EDSR, RDN}-based GSASR present in paper, due to the page limited in our paper, we don't reported the results of Swin-based model. Here we provide the Swin-based GSASR model.
 
-### Pre-trained models
+### Pre-trained models (Paper Version)
 Download models from the following link.
 
 |           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
 |:------------------------:|:---:|:----------------------------------------------------------------------------------------------------:|:---:|
 |EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper Reported|
 |RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper Reported|
-|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper Reported|
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper (not reported)|
 
 
 ### Inference for single image
