@@ -50,7 +50,7 @@ Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE
  - CUDA Toolkit (necessary)
 
 
-Firstly, please make sure you have installed CUDA Toolkit! Since we have hand-crafted CUDA operators, you need to compile them when you run GSASR.
+Firstly, please make sure you have installed [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)! Since we have hand-crafted CUDA operators, you need to compile them when you run GSASR.
 
 Then, export the CUDA path in your terminal, for me, I do it like this:
 
