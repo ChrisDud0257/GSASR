@@ -85,12 +85,12 @@ python inference.py \
 using `--tile_process` and `--AMP_test` if memory is limited.
 
 
-## 📏 Paper Results on Benchmarks
+## 📏 Pre-trained Models (Paper Version)
 
 Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+RoPE+Flash Attention tricks for fair comparison. 
 Besides {EDSR, RDN}-based GSASR present in paper, due to the page limited in our paper, we don't reported the results of Swin-based model. Here we provide the Swin-based GSASR model.
 
-### Pre-trained models (Paper Version)
+### Download Pre-trained models (Paper Version)
 Download models from the following link.
 
 |           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
@@ -109,8 +109,6 @@ python inference_paper.py \
     --model <{EDSR, RDN, SWIN}> \
     --scale <scale> [--tile_process]
 ```
-
-
 
 
 ### Inference on standard benchmark
@@ -136,6 +134,12 @@ python inference_paper_benchmark.py \
 ```
 
 Please indicate the "input_img_path" to your downloaded DIV2K testing parts (which is provided by us).
+
+If you want to test GSASR on standard benchmarks with full size, please use the same commands as above. We also provide the widely-used testing benchmarks, including Set5, Set14, DIV2K-val 100, LSDIR-val 250, Urban100, Manga109, BSDS100, General100, we also provide the each image's corresponding LR images with different scaling factors which is obtained by bicubic operation.
+
+|Dataset|Link|
+|:---:|:---:|
+|Testing Benchmarks|[Google Drive](https://drive.google.com/drive/folders/1ivwuFoyNwRf9FevHGlCEnjhXLD6Og7mj?usp=sharing)|
 
 ### Memory and inference time estimation
 In `inference_paper_benchmarks.py`, we integrate the statistics code of test time (ms) and GPU memory (MB). In our paper, we calculate the computational cost on a single NVIDIA A100 GPU, and we input the full size image into the model, we don't use tile_process. The inference time omit the pre-processing and post-processing and record the full pipeline cost inlcuding encoder, decoder and rendering.
