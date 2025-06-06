@@ -45,18 +45,33 @@ Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE
 ## 🔧 Usage
 
 ### Prepraration
+ - Pytorch == 2.0 (PyTorch Version must >= 2.0)
+ - Anaconda
+ - CUDA Tookit (necessary)
+
+
+Firstly, please make sure you have installed CUDA Toolkit! Since we have hand-crafted CUDA operators, you need to compile them when you run GSASR.
+
+Then, export the CUDA path in your terminal, for me, I do it like this:
 
 ```bash
-git clone https://github.com/ChrisDud0257/GSASR
-cd GSASR
-conda create --name gsasr python=3.10
-conda activate gsasr
-pip install -r requirements.txt
-pip install -e . # build gscuda
+export CUDA_HOME=/data0/chendu/cuda-11.7
 ```
 
 
-We test code in CUDA 12.4 and 11.8.
+```bash
+git clone https://github.com/ChrisDud0257/GSASR
+cd GSASR/TrainTestGSASR
+conda create --name gsasr python=3.10
+conda activate gsasr
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
+BASICSR_EXT=True python setup.py develop
+```
+
+If you meet the error ```ModuleNotFoundError: No module named ‘torchvision.transforms.functional_tensor```, please refer to this [issue](https://github.com/xinntao/Real-ESRGAN/issues/768).
+
+We have tested that the versions of CUDA from 11.0 to 12.4 are all OK.
 
 
 ### Runing
@@ -148,12 +163,10 @@ In `inference_paper_benchmarks.py`, we integrate the statistics code of test tim
 After inference,  execute the code to estimate PSNR/SSIM/LPIPS/DISTS.
 
 ```bash
-pip install basicsr
-# if meet the error of ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor',
-# please refer to https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985#issuecomment-1813885266
-python TrainTestGSASR/scripts/metrics/calculate_psnr_ssim.py --test_y_channel --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
-python TrainTestGSASR/scripts/metrics/calculate_lpips.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
-python TrainTestGSASR/scripts/metrics/calculate_dists.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
+cd TrainTestGSASR/scripts/metrics/
+python calculate_psnr_ssim.py --test_y_channel --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
+python calculate_lpips.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
+python Tcalculate_dists.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
 ```
 Please note that we test them on Y channel of Ycbcr space with `--test_y_channel`  when calculating PSNR/SSIM. When calculating PSNR/SSIM/LPIPS/DISTS,  we set `crop_border=${scale}` if the scaling factor is not larger than 8, otherwise `crop_border=8`.
 
