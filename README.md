@@ -113,7 +113,7 @@ python inference_paper.py \
 
 
 
-### Inference on DIV2K benchmark
+### Inference on standard benchmark
 To get the numerical performance in Tab.2 of paper. Please download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
 
 |Dataset|Download|
