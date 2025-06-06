@@ -47,7 +47,7 @@ Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE
 ### Prepraration
  - Pytorch == 2.0 (PyTorch Version must >= 2.0)
  - Anaconda
- - CUDA Tookit (necessary)
+ - CUDA Toolkit (necessary)
 
 
 Firstly, please make sure you have installed CUDA Toolkit! Since we have hand-crafted CUDA operators, you need to compile them when you run GSASR.
