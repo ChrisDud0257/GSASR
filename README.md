@@ -28,7 +28,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
-We provide **models** of varying-scale encoder for GSASR:
+We provide **models** of varying-scale encoder for GSASR, thoes models have superior performance than the models reported in our main paper:
 
 |           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
