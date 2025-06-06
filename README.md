@@ -26,7 +26,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
 
 
-## ⚙️  Pre-trained Models (Enhanced and Ultra Perfornmance Version)
+## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
 We provide **models** of varying-scale encoder for GSASR:
 
@@ -87,7 +87,7 @@ using `--tile_process` and `--AMP_test` if memory is limited.
 
 ## 📏 Paper Results on Benchmarks
 
-Please note that, in our paper, we only train GSASR on DIV2K wihtout AMP+RoPE+Flash Attention tricks for fair comparison. 
+Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+RoPE+Flash Attention tricks for fair comparison. 
 Besides {EDSR, RDN}-based GSASR present in paper, due to the page limited in our paper, we don't reported the results of Swin-based model. Here we provide the Swin-based GSASR model.
 
 ### Pre-trained models (Paper Version)
