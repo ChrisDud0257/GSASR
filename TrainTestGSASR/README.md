@@ -2,7 +2,7 @@
 
 We provide three different versions of training codes here, including the paper version, the enhanced version with AMP and Flash Attention, as well as the ultra performance version.
 
-## 1. Installation
+## 1. Installation (Please skip this step if your have already installed the relevant environmets when you do quick inference)
  - python == 3.10
  - PyTorch == 2.0
  - Anaconda
