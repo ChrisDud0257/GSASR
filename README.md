@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Generalized and Efficient 2D Gaussian Splatting for Arbitrary-scale Super-Resolution</h1>
 
-[**Du Chen**](https://github.com/ChrisDud0257)<sup>12*</sup> · [**Liyi Chen**](https://github.com/mt-cly)<sup>1*</sup> · [**Zhengqiang Zhang**](https://github.com/xtudbxk)<sup>12</sup> · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>12*</sup>
+[**Du Chen**](https://github.com/ChrisDud0257)<sup>1,2*</sup> · [**Liyi Chen**](https://github.com/mt-cly)<sup>1*</sup> · [**Zhengqiang Zhang**](https://github.com/xtudbxk)<sup>1,2</sup> · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>1,2*</sup>
 <br>
 
 <sup>1</sup>The Hong Kong Polytechnic University <sup>2</sup>OPPO Research Institute
@@ -98,7 +98,7 @@ Using `--tile_process` and `--AMP_test` if memory is limited.
 ## 📏 Pre-trained Models (Paper Version)
 
 Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+RoPE+Flash Attention tricks for fair comparison. 
-Besides {EDSR, RDN}-based GSASR present in paper, due to the page limited in our paper, we don't reported the results of Swin-based model. Here we provide the Swin-based GSASR model.
+Besides {EDSR, RDN}-based GSASR present in paper, due to the limited pages in our paper, we don't report the results of Swin-based model. Here, we still provide the Swin-based GSASR model.
 
 ### Download Pre-trained models (Paper Version)
 Download models from the following link.
@@ -122,7 +122,7 @@ python inference_paper.py \
 
 
 ### Inference on standard benchmark
-To get the numerical performance in Tab.2 of paper. Please download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
+To get the numerical performance in Tab.2 of the main paper. Please download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
 
 |Dataset|Download|
 |:--:|:--:|
@@ -145,7 +145,7 @@ python inference_paper_benchmark.py \
 
 Please indicate the "input_img_path" to your downloaded DIV2K testing parts (which is provided by us).
 
-If you want to test GSASR on standard benchmarks with full size, please use the same commands as above. We also provide the widely-used testing benchmarks, including Set5, Set14, DIV2K-val 100, LSDIR-val 250, Urban100, Manga109, BSDS100, General100, we also provide the each image's corresponding LR images with different scaling factors which is obtained by bicubic operation.
+If you want to test GSASR on standard benchmarks with full size, please use the same commands as above. We also provide the widely-used testing benchmarks, including Set5, Set14, DIV2K-val 100, LSDIR-val 250, Urban100, Manga109, BSDS100, General100, and each GT image's corresponding LR counterparts with different scaling factors which is obtained by bicubic operation.
 
 |Dataset|Link|
 |:---:|:---:|
@@ -161,11 +161,11 @@ After inference,  execute the code to estimate PSNR/SSIM/LPIPS/DISTS.
 cd TrainTestGSASR/scripts/metrics/
 python calculate_psnr_ssim.py --test_y_channel --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
 python calculate_lpips.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
-python Tcalculate_dists.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
+python calculate_dists.py  --gt <path_to_GT_folder> --restored <path_to_SR_folder> --scale <scale> [--suffix <suffix_of_images>]
 ```
 Please note that we test them on Y channel of Ycbcr space with `--test_y_channel`  when calculating PSNR/SSIM. When calculating PSNR/SSIM/LPIPS/DISTS,  we set `crop_border=${scale}` if the scaling factor is not larger than 8, otherwise `crop_border=8`.
 
-## 🗝️ Training
+## 🗝️ Training and Testing
 
 ### Dataset preparation
 
@@ -175,6 +175,9 @@ Please follow this [instruction](TrainTestGSASR/datasets/README.MD) to prepare t
 
 Please follow this [instruction](TrainTestGSASR/README.md) to train GSASR.
 
+### Testing GSASR
+
+Please follow this [instruction](TrainTestGSASR/README.md) to test GSASR if you further want to do it .
 
 
 ## 🙏 Acknowlegement
