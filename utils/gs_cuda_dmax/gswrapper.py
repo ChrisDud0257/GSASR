@@ -3,7 +3,6 @@ import torch
 from torch.utils.cpp_extension import load
 from torch.autograd import Function
 from torch.autograd.function import once_differentiable
-import gscuda
 # 
 build_path = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'build')
 os.makedirs(build_path, exist_ok=True)
@@ -17,6 +16,7 @@ file_path = os.path.split(os.path.abspath(__file__))[0]
 #         build_directory=build_path,
 #         verbose=True)
 
+import gscuda
 GSWrapper = gscuda
 
 class GSCUDA(Function):
