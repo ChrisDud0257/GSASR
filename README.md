@@ -85,13 +85,14 @@ python demo_gr.py
 
 ### 💻 CLI
 ```bash
-python inference_enhence.py \
+python inference_enhenced.py \
     --input_img_path <path_to_img> \
     --save_sr_path <path_to_saved_folder> \
     --model <{EDSR_DIV2K, EDSR_DF2K, RDN_DIV2K, RDN_DF2K, SWIN_DIV2K,SWIN_DF2K, HATL_SA1B}> \
     --scale <scale> [--tile_process] [--AMP_test]
 ```
 If it fails to access Huggingface, try to manually download pretrained models and specify local path with `--model_path <path_to_model_weight>`. 
+
 Using `--tile_process` and `--AMP_test` if memory is limited.
 
 
