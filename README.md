@@ -54,16 +54,16 @@ Firstly, please make sure you have installed [CUDA Toolkit](https://developer.nv
 
 ```bash
 git clone https://github.com/ChrisDud0257/GSASR
-cd GSASR/TrainTestGSASR
+cd GSASR
 conda create --name gsasr python=3.10
 conda activate gsasr
-export CUDA_HOME=[path to your CUDA path] ### For me, I do it like this: export CUDA_HOME=/data0/chendu/cuda-11.8
+export CUDA_HOME=${path_to_CUDA} ### specify the path to cuda-11.8
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
+python setup_gscuda.py install # gscuda
+cd TrainTestGSASR
 pip install -r requirements.txt
-BASICSR_EXT=True python setup.py develop
+BASICSR_EXT=True python setup.py develop # basicsr
 ```
-
-If you meet the error ```ModuleNotFoundError: No module named ‘torchvision.transforms.functional_tensor```, please refer to this [issue](https://github.com/xinntao/Real-ESRGAN/issues/768).
 
 We have tested that the versions of CUDA from 11.0 to 12.4 are all OK.
 
@@ -85,13 +85,14 @@ python demo_gr.py
 
 ### 💻 CLI
 ```bash
-python inference.py \
+python inference_enhence.py \
     --input_img_path <path_to_img> \
     --save_sr_path <path_to_saved_folder> \
     --model <{EDSR_DIV2K, EDSR_DF2K, RDN_DIV2K, RDN_DF2K, SWIN_DIV2K,SWIN_DF2K, HATL_SA1B}> \
     --scale <scale> [--tile_process] [--AMP_test]
 ```
-using `--tile_process` and `--AMP_test` if memory is limited.
+If it fails to access Huggingface, try to manully download pretrained models and specify local path with `--model_path <path_to_model_weight>`. 
+Using `--tile_process` and `--AMP_test` if memory is limited.
 
 
 ## 📏 Pre-trained Models (Paper Version)

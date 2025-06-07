@@ -21,12 +21,18 @@ def load_model(
     model_name: str = "EDSR_DIV2K",
     device: str | torch.device = "cuda"
 ):
-    enc_path = hf_hub_download(
-            repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'encoder.pth')
-        )
-    dec_path = hf_hub_download(
-            repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'decoder.pth')
-        )
+    if os.path.exists(os.path.join(pretrained_model_name_or_path, 'encoder.pth')) and os.path.exists(os.path.join(pretrained_model_name_or_path, 'decoder.pth')):
+        print(f"Loading model from {pretrained_model_name_or_path}")
+        enc_path = os.path.join(pretrained_model_name_or_path, 'encoder.pth')
+        dec_path = os.path.join(pretrained_model_name_or_path, 'decoder.pth')
+    else:
+        print(f"loading model from hugginface")
+        enc_path = hf_hub_download(
+                repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'encoder.pth')
+            )
+        dec_path = hf_hub_download(
+                repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'decoder.pth')
+            )
 
     enc_weight = torch.load(enc_path, weights_only=True)['params_ema']
     dec_weight = torch.load(dec_path, weights_only=True)['params_ema']
@@ -73,7 +79,7 @@ def postprocess(x, gt_size_h, gt_size_w):
 
 def main(args):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    encoder, decoder = load_model(model_name=args.model, device=device)
+    encoder, decoder = load_model(pretrained_model_name_or_path=args.model_path, model_name=args.model, device=device)
 
     time_cost_list = []
     used_memory_list = []
@@ -173,6 +179,7 @@ if __name__ == '__main__':
     parser.add_argument('--scale', type = float, default = 4)
     parser.add_argument('--suffix', type = str, default = 'GSASR_paper_benchmark')
     parser.add_argument('--model', type = str, default = 'SWIN', choices=['EDSR', 'RDN', 'SWIN']) # EDSR-Baseline, RDN or SwinIR
+    parser.add_argument('--model_path', type = str, default = 'mutou0308/GSASR') 
     ### In the following, denominator must be the least common miltiple of the encoder's window size (if there exists window attention) and the decoder's window size
     ### For EDSR-Baseline and RDN, please set denominator to 12, for SwinIR, please set denominator to 24
     parser.add_argument('--denominator', type = int, default = 24) 
