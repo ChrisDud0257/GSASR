@@ -190,7 +190,9 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
-We provide **models** of varying-scale encoder for GSASR, thoes models have superior performance than the models reported in our main paper:
+Apart from the models reported in our paper, we further provide different versions of **GSASR models** here, which are trained with varied encoder backbones or training datasets.
+
+Please note that, in the following, `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. Thoes models have superior performance than the models reported in our main paper:
 
 |           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
@@ -202,7 +204,9 @@ We provide **models** of varying-scale encoder for GSASR, thoes models have supe
 |SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
 |HATL| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
 
-Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. In our paper report, we does not using these tricks for fair comparison, please refer to [paper results on benchmarks](#-paper-results-on-benchmarks).
+Toward the results of our paper, we does not using these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
+
+As for the pretrained models reported in our paper, please refer to **Pre-trained Models (Paper Version)** in the below.
 
 ## 🔧 Usage
 
@@ -261,7 +265,8 @@ Using `--tile_process` and `--AMP_test` if memory is limited.
 ## 📏 Pre-trained Models (Paper Version)
 
 Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+RoPE+Flash Attention tricks for fair comparison. 
-Besides {EDSR, RDN}-based GSASR present in paper, due to the limited pages in our paper, we don't report the results of Swin-based model. Here, we still provide the Swin-based GSASR model.
+Due to the limited pages in our paper, we don't report the results of Swin-based model. Here, besides {EDSR, RDN}-based GSASR present in paper, we further provide the Swin-based GSASR model.
+The {EDSR, RDN}-based GSASR models provided bellow should exactly generate the same results as that reported in our paper (Table.1 in the main paper and Table.1 ~ Table.7 in the supplementary).
 
 ### Download Pre-trained models (Paper Version)
 Download models from the following link.
@@ -287,6 +292,8 @@ python inference_paper.py \
 ### Inference on standard benchmark
 To get the numerical performance in Tab.2 of the main paper. Please download cropped 720*720 size of GT images, and the corresponding LR images of DIV2K testing parts, which are utilized in our paper.
 
+The {EDSR, RDN}-based GSASR models provided bellow should exactly generate the same PSNR/SSIM/LPIPS/DISTS results as that reported in our paper (Table.2 in the main paper and Table.8 the supplementary).
+
 |Dataset|Download|
 |:--:|:--:|
 |DIV2K_GT720|[Google Drive](https://drive.google.com/file/d/1FQrVcCppV_No-0BeTxUh2kBaGIb6xZ82/view?usp=sharing)|
@@ -307,6 +314,8 @@ python inference_paper_benchmark.py \
 ```
 
 Please indicate the "input_img_path" to your downloaded DIV2K testing parts (which is provided by us).
+
+
 
 If you want to test GSASR on standard benchmarks with full size, please use the same commands as above. We also provide the widely-used testing benchmarks, including Set5, Set14, DIV2K-val 100, LSDIR-val 250, Urban100, Manga109, BSDS100, General100, and each GT image's corresponding LR counterparts with different scaling factors which is obtained by bicubic operation.
 
