@@ -40,7 +40,9 @@ We provide **models** of varying-scale encoder for GSASR, thoes models have supe
 |SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
 |HATL| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
 
-Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. In our paper report, we does not using these tricks for fair comparison, please refer to [paper results on benchmarks](#-paper-results-on-benchmarks).
+Please note that these `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. In our paper report, we does not using these tricks for fair comparison
+
+As for the pretrained models reported in our paper, please refer to [Pre-trained Models (Paper Version)](#-pre-trained-models-(paper-version)).
 
 ## 🔧 Usage
 
