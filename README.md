@@ -19,6 +19,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ![Fast Rasterization](./assets/sampling.png)
 
+<div style="overflow-x:auto; font-size:14px;">
 <table>
   <tr>
     <th rowspan="2">Backbone</th>
