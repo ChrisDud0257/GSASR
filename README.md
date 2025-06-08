@@ -19,14 +19,19 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ![Fast Rasterization](./assets/sampling.png)
 
+
+
+
+**Comparisons among representative INR-based ASR models and different versions of GSASR, PSNR/SSIM are tested on Y channel of Ycbcr space.**
+
 <div style="overflow-x:auto; font-size:10px;">
 <table>
   <tr>
-    <th rowspan="2">Backbone</th>
+    <th rowspan="2">Encoder Backbone</th>
     <th rowspan="2">Methods</th>
     <th rowspan="2">Version</th>
-    <th rowspan="2">Dataset</th>
-    <th colspan="3" align="center">PSNR/SSIM/LPIPS/DIST (x4)</th>
+    <th rowspan="2">Trainging Dataset</th>
+    <th colspan="3" align="center">PSNR/SSIM/LPIPS/DIST (x4 scaling factor)</th>
   </tr>
   <tr>
     <td align="center">DIV2K</td>
@@ -193,7 +198,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 Apart from the models reported in our paper, we further provide different versions of **GSASR models** here, which are trained with varied encoder backbones or training datasets.
 
-Please note that, in the following, `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. Thoes models have superior performance than the models reported in our main paper:
+Please note that, in the following, based on our `Paper Reported` models, `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost. Thoes models have superior performance than the models reported in our main paper:
 
 |           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
@@ -205,7 +210,7 @@ Please note that, in the following, `Enhanced` and `Ultra Performance` models em
 |SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
 |HATL| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
 
-Toward the results of our paper, we does not using these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
+Toward the results of our paper, we do not use these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
 
 As for the pretrained models reported in our paper, please refer to **Pre-trained Models (Paper Version)** in the below.
 
