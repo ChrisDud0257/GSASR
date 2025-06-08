@@ -24,7 +24,7 @@ datasets:
   train:
     name: DIV2K
     type: ContinuousBicubicDownsampleDataset
-    all_gt_list: ['/home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/DIV2K/trainHR_multiscaleHR_shortest512_subimages512']
+    all_gt_list: ['/dataset/DIV2K/trainHR_multiscaleHR_shortest512_subimages512']
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -46,8 +46,8 @@ datasets:
   val:
     name: DIV2K100
     type: PairedImageDataset
-    dataroot_gt: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x4/GT
-    dataroot_lq: /home/notebook/data/sharedgroup/RG_YLab/aigc_share_group_data/chendu/dataset/AnyScaleTestBicubic/DIV2K100/x4/LR
+    dataroot_gt: /dataset/DIV2K100/x4/GT
+    dataroot_lq: /dataset/DIV2K100/x4/LR
     io_backend:
       type: disk
 

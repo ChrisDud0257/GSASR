@@ -19,6 +19,168 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ![Fast Rasterization](./assets/sampling.png)
 
+<table>
+  <tr>
+    <th rowspan="2">Backbone</th>
+    <th rowspan="2">Methods</th>
+    <th rowspan="2">Version</th>
+    <th rowspan="2">Dataset</th>
+    <th colspan="3" align="center">PSNR/SSIM/LPIPS/DIST (x4)</th>
+  </tr>
+  <tr>
+    <td align="center">DIV2K</td>
+    <td align="center">LSDIR</td>
+    <td align="center">Urban100</td>
+  </tr>
+
+  <!-- EDSR Backbone -->
+  <tr>
+    <td rowspan="6">EDSR</td>
+    <td>LIIF</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.43/0.8388/0.2662/0.1403</td>
+    <td align="center">26.21/0.7614/0.2978/0.1678</td>
+    <td align="center">26.14/0.7885/0.2271/0.1738</td>
+  </tr>
+  <tr>
+    <td>GaussianSR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.46/0.8389/0.2684/0.1406</td>
+    <td align="center">26.23/0.7615/0.3007/0.1679</td>
+    <td align="center">26.19/0.7893/0.2283/0.1730</td>
+  </tr>
+  <tr>
+    <td>CiaoSR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.67/0.8431/0.2585/0.1370</td>
+    <td align="center">26.42/0.7681/0.2865/0.1631</td>
+    <td align="center">26.69/0.8091/0.2078/0.1659</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.89/0.8486/0.2518/0.1301</td>
+    <td align="center">26.65/0.7774/0.2777/0.1554</td>
+    <td align="center">27.01/0.8142/0.1987/0.1552</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DIV2K</td>
+    <td align="center">31.01/0.8509/0.2508/0.1306</td>
+    <td align="center">26.78/0.7813/0.2962/0.1543</td>
+    <td align="center">27.34/0.8230/0.1920/0.1515</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DF2K</td>
+    <td align="center">31.04/0.8515/0.2512/0.1307</td>
+    <td align="center">26.82/0.7827/0.2751/0.1540</td>
+    <td align="center">27.45/0.8256/0.1902/0.1507</td>
+  </tr>
+
+  <!-- RDN Backbone -->
+  <tr>
+    <td rowspan="6">RDN</td>
+    <td>LIIF</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.71/0.8449/0.2566/0.1354</td>
+    <td align="center">26.48/0.7714/0.2838/0.1603</td>
+    <td align="center">26.71/0.8055/0.2062/0.1562</td>
+  </tr>
+  <tr>
+    <td>GaussianSR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.76/0.8457/0.2570/0.1347</td>
+    <td align="center">26.53/0.7727/0.2837/0.1595</td>
+    <td align="center">26.77/0.8064/0.2069/0.1610</td>
+  </tr>
+  <tr>
+    <td>CiaoSR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.91/0.8481/0.2525/0.1327</td>
+    <td align="center">26.66/0.7770/0.2768/0.1563</td>
+    <td align="center">27.10/0.8142/0.1966/0.1559</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">30.96/0.8500/0.2505/0.1288</td>
+    <td align="center">26.73/0.7801/0.2752/0.1533</td>
+    <td align="center">27.15/0.8177/0.1953/0.1515</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DIV2K</td>
+    <td align="center">31.03/0.8513/0.2499/0.1306</td>
+    <td align="center">26.79/0.7819/0.2740/0.1543</td>
+    <td align="center">27.37/0.8238/0.1898/0.1511</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DF2K</td>
+    <td align="center">31.10/0.8525/0.2482/0.1296</td>
+    <td align="center">26.88/0.7848/0.2709/0.1527</td>
+    <td align="center">27.58/0.8289/0.1849/0.1500</td>
+  </tr>
+
+  <!-- SWIN Backbone -->
+  <tr>
+    <td rowspan="4">SWIN</td>
+    <td>CiaoSR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">31.05/0.8511/0.2487/0.1316</td>
+    <td align="center">26.80/0.7812/0.2724/0.1552</td>
+    <td align="center">27.40/0.8231/0.1869/0.1535</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Paper</td>
+    <td>DIV2K</td>
+    <td align="center">31.06/0.8521/0.2487/0.1270</td>
+    <td align="center">26.84/0.7837/0.2719/0.1503</td>
+    <td align="center">27.39/0.8247/0.1913/0.1466</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DIV2K</td>
+    <td align="center">31.10/0.8530/0.2463/0.1285</td>
+    <td align="center">26.88/0.7849/0.2690/0.1517</td>
+    <td align="center">27.55/0.8280/0.1850/0.1475</td>
+  </tr>
+  <tr>
+    <td>GSASR</td>
+    <td>Enhanced</td>
+    <td>DF2K</td>
+    <td align="center">31.17/0.8541/0.2456/0.1288</td>
+    <td align="center">26.96/0.7876/0.2665/0.1513</td>
+    <td align="center">27.81/0.8343/0.1781/0.1465</td>
+  </tr>
+
+  <!-- HATL Backbone -->
+  <tr>
+    <td>HATL</td>
+    <td>GSASR</td>
+    <td>Ultra Performance</td>
+    <td>SA1B</td>
+    <td align="center">31.31/0.8570/0.2381/0.1268</td>
+    <td align="center">27.17/0.7948/0.2548/0.1470</td>
+    <td align="center">28.44/0.8493/0.1580/0.1394</td>
+  </tr>
+</table>
 
 ## 🎉  News
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
