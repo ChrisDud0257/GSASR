@@ -28,7 +28,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
-Apart from the models reported in our paper, we further provide different versions of **GSASR models** here, which are trained with varied encoder backbones of training datasets.
+Apart from the models reported in our paper, we further provide different versions of **GSASR models** here, which are trained with varied encoder backbones or training datasets.
 
 Please note that, in the following, `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost based on our `Paper Reported` models. Thoes models have superior performance than the models reported in our main paper:
 
