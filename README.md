@@ -67,7 +67,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
   </tr>
   <tr>
     <td>GSASR</td>
-    <td>Paper</td>
+    <td>Paper Reported</td>
     <td>DIV2K</td>
     <td align="center">30.89/0.8486/0.2518/0.1301</td>
     <td align="center">26.65/0.7774/0.2777/0.1554</td>
@@ -118,7 +118,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
   </tr>
   <tr>
     <td>GSASR</td>
-    <td>Paper</td>
+    <td>Paper Reported</td>
     <td>DIV2K</td>
     <td align="center">30.96/0.8500/0.2505/0.1288</td>
     <td align="center">26.73/0.7801/0.2752/0.1533</td>
@@ -153,7 +153,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
   </tr>
   <tr>
     <td>GSASR</td>
-    <td>Paper</td>
+    <td>Paper (not Reported)</td>
     <td>DIV2K</td>
     <td align="center">31.06/0.8521/0.2487/0.1270</td>
     <td align="center">26.84/0.7837/0.2719/0.1503</td>
@@ -187,6 +187,12 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
     <td align="center">28.44/0.8493/0.1580/0.1394</td>
   </tr>
 </table>
+
+Maybe you are confused with different versions of GSASR models, we explain here.
+ - Paper Reported: the results of which are reported in our paper.
+ - Paper (not Reported): the results of which are not shown in our paper due to limited pages.
+ - Enhanced: we further utilize Flash Attention to substitute the vanilla self attention in Gaussion decoder to do acceleration, and utilize [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) to support the position embedding in Flash Attention. During training/inference stage, we utilize Automatic Mixed Precision (AMP) by combining bfloat16 and fp32 precisions to further accelerate the speed.
+ - Ultra Performance: based on AMP+Flash Attention+ROPE in enhanced version, we train with [HAT-L](https://github.com/XPixelGroup/HAT) encoder on [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset to explore the ultimost performance of GSASR.
 
 ## 🎉  News
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
@@ -277,11 +283,11 @@ The {EDSR, RDN}-based GSASR models provided bellow should exactly generate the s
 ### Download Pre-trained models (Paper Version)
 Download models from the following link.
 
-|           Model Backbone           |  Training Dataset |                                             Download                                               | Version|
+|           Encoder Backbone           |  Training Dataset |                                             Download                                               | Version|
 |:------------------------:|:---:|:----------------------------------------------------------------------------------------------------:|:---:|
 |EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper Reported|
 |RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper Reported|
-|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper (not reported)|
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper (not Reported)|
 
 
 ### Inference for single image
