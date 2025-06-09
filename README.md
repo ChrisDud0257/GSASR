@@ -186,12 +186,12 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 </table>
 
 
-**Comparisons to representative/SoTA ASR models (PSNR/SSIM are tested on Y channel of Ycbcr space
+**Comparisons to representative/SoTA ASR models (PSNR/SSIM are tested on Y channel of Ycbcr space)**
 
-We provide three version of GSASR:
+We provide three versions of GSASR:
  - Paper: the results we reported in our paper. (not reported) means results are not shown in our paper due to limited pages.
  - Enhanced: we introduce [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) with Flash Attention under  Automatic Mixed Precision (AMP) training/test to to reduce memory and time cost.
- - Ultra Performance: based on `Enhanced`, we explore the performance upper bound of GSASR based on  [HAT-L](https://github.com/XPixelGroup/HAT) encoder and [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset.
+ - Ultra Performance: based on `Enhanced` settings, we explore the performance upper bound of GSASR by introducing  [HAT-L](https://github.com/XPixelGroup/HAT) encoder and [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset.
 
 ## 🎉  News
 - **2025-06-08:** We update the comparison results among representative/SoTA ASR models and different versions of GSASR.
