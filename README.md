@@ -21,9 +21,6 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 
 
 
-
-**Comparisons among representative/SoTA ASR models and different versions of GSASR, PSNR/SSIM are tested on Y channel of Ycbcr space.**
-
 <div style="overflow-x:auto; font-size:10px;">
 <table>
   <tr>
@@ -188,11 +185,13 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
   </tr>
 </table>
 
-Maybe you are confused with different versions of GSASR models, we explain here.
- - Paper Reported: the results of which are reported in our paper.
- - Paper (not Reported): the results of which are not shown in our paper due to limited pages.
- - Enhanced: we further utilize Flash Attention to substitute the vanilla self attention in Gaussion decoder to do acceleration, and utilize [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) to support the position embedding in Flash Attention. During training/inference stage, we utilize Automatic Mixed Precision (AMP) by combining bfloat16 and fp32 precisions to further accelerate the speed.
- - Ultra Performance: based on AMP+Flash Attention+ROPE in enhanced version, we train with [HAT-L](https://github.com/XPixelGroup/HAT) encoder on [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset to explore the ultimost performance of GSASR.
+
+**Comparisons to representative/SoTA ASR models (PSNR/SSIM are tested on Y channel of Ycbcr space
+
+We provide three version of GSASR:
+ - Paper: the results we reported in our paper. (not reported) means results are not shown in our paper due to limited pages.
+ - Enhanced: we introduce [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) with Flash Attention under  Automatic Mixed Precision (AMP) training/test to to reduce memory and time cost.
+ - Ultra Performance: based on `Enhanced`, we explore the performance upper bound of GSASR based on  [HAT-L](https://github.com/XPixelGroup/HAT) encoder and [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset.
 
 ## 🎉  News
 - **2025-06-08:** We update the comparison results among representative/SoTA ASR models and different versions of GSASR.
@@ -203,9 +202,6 @@ Maybe you are confused with different versions of GSASR models, we explain here.
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
-Apart from the models reported in our paper, we further provide different versions of **GSASR models** here, which are trained with varied encoder backbones or training datasets.
-
-Please note that, in the following, based on our `Paper Reported` models, `Enhanced` and `Ultra Performance` models employ AMP+ROPE+Flash Attention to reduce memory and time cost. Thoes models have superior performance than the models reported in our main paper:
 
 |           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
@@ -219,7 +215,7 @@ Please note that, in the following, based on our `Paper Reported` models, `Enhan
 
 Toward the results of our paper, we do not use these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
 
-As for the pretrained models reported in our paper, please refer to **Pre-trained Models (Paper Version)** in the below.
+As for the pretrained models reported in our paper, please refer to **Pre-trained Models (Paper Version)** in below.
 
 ## 🔧 Usage
 
