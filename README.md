@@ -15,6 +15,14 @@
 
 </div>
 
+
+## 🎉  News
+- **2025-06-08:** We update the comparison results among representative/SoTA ASR models and different versions of GSASR.
+- **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
+- **2025-05-30:** The {EDSR, RDN, SWIN, HATL}-based GSASR models are available.
+- **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
+
+
 This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by representing given LR image as millions of continuous 2D Gaussians.  
 
 ![Fast Rasterization](./assets/sampling.png)
@@ -192,13 +200,6 @@ We provide three versions of GSASR:
  - Paper: the results we reported in our paper. (not reported) means results are not shown in our paper due to limited pages.
  - Enhanced: we introduce [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) with Flash Attention under  Automatic Mixed Precision (AMP) training/test to to reduce memory and time cost.
  - Ultra Performance: based on `Enhanced` settings, we explore the performance upper bound of GSASR by introducing  [HAT-L](https://github.com/XPixelGroup/HAT) encoder and [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset.
-
-## 🎉  News
-- **2025-06-08:** We update the comparison results among representative/SoTA ASR models and different versions of GSASR.
-- **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
-- **2025-05-30:** The {EDSR, RDN, SWIN, HATL}-based GSASR models are available.
-- **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
-
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
 
