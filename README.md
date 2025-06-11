@@ -35,7 +35,7 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
     <th rowspan="2">Encoder Backbone</th>
     <th rowspan="2">Methods</th>
     <th rowspan="2">Version</th>
-    <th rowspan="2">Trainging Dataset</th>
+    <th rowspan="2">Training Dataset</th>
     <th colspan="3" align="center">PSNR/SSIM/LPIPS/DIST (x4 scaling factor)</th>
   </tr>
   <tr>
