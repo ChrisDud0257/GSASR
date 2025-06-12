@@ -216,7 +216,7 @@ We provide three versions of GSASR:
 
 Toward the results of our paper, we do not use these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
 
-As for the pretrained models reported in our paper, please refer to **Pre-trained Models (Paper Version)** in below.
+As for the pretrained models reported in our paper, please refer to [**Pre-trained Models (Paper Version)**](## Pre-trained Models (Paper Version)) in below.
 
 ## 🔧 Usage
 
