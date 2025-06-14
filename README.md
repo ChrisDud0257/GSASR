@@ -13,6 +13,8 @@
 <a href="https://huggingface.co/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>
 <a href="https://huggingface.co/spaces/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Gradio%20Demo-Huggingface-blue"></a>
 
+
+
 </div>
 
 
@@ -194,11 +196,11 @@ This work presents GSASR. It achieve SoTA in arbitrary-scale super-resolution by
 </table>
 
 
-**Comparisons to representative/SoTA ASR models (PSNR/SSIM are tested on Y channel of Ycbcr space)**
+**Comparisons with representative/SoTA ASR models (PSNR/SSIM are tested on Y channel of Ycbcr space).**
 
 We provide three versions of GSASR:
  - Paper: the results we reported in our paper. (not reported) means results are not shown in our paper due to limited pages.
- - Enhanced: we introduce [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) with Flash Attention under  Automatic Mixed Precision (AMP) training/test to to reduce memory and time cost.
+ - Enhanced: we introduce [Rotary Position Embedding (ROPE)](https://github.com/naver-ai/rope-vit) with Flash Attention, and utilize Automatic Mixed Precision (AMP) strategy during training/inference to to reduce memory and time cost.
  - Ultra Performance: based on `Enhanced` settings, we explore the performance upper bound of GSASR by introducing  [HAT-L](https://github.com/XPixelGroup/HAT) encoder and [SA1B](https://ai.meta.com/datasets/segment-anything/) dataset.
 
 ## ⚙️  Pre-trained Models (Enhanced and Ultra Performance Version)
@@ -274,7 +276,7 @@ Using `--tile_process` and `--AMP_test` if memory is limited.
 
 ## 📏 Pre-trained Models (Paper Version)
 
-Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+RoPE+Flash Attention tricks for fair comparison. 
+Please note that, in our paper, we only train GSASR on DIV2K dataset without AMP+ROPE+Flash Attention tricks for fair comparison. 
 Due to the limited pages in our paper, we don't report the results of Swin-based model. Here, besides {EDSR, RDN}-based GSASR present in paper, we further provide the Swin-based GSASR model.
 The {EDSR, RDN}-based GSASR models provided bellow should exactly generate the same results as that reported in our paper (Table.1 in the main paper and Table.1 ~ Table.7 in the supplementary).
 
