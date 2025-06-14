@@ -38,10 +38,10 @@ def load_model(
     device: str | torch.device = "cuda"
 ):
     enc_path = hf_hub_download(
-            repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'encoder.pth')
+            repo_id=pretrained_model_name_or_path, filename=os.path.join('GSASR_enhenced_ultra', model_name, 'encoder.pth')
         )
     dec_path = hf_hub_download(
-            repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'decoder.pth')
+            repo_id=pretrained_model_name_or_path, filename=os.path.join('GSASR_enhenced_ultra', model_name, 'decoder.pth')
         )
 
     enc_weight = torch.load(enc_path, weights_only=True)['params_ema']

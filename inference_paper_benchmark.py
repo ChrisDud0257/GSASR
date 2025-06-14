@@ -17,7 +17,7 @@ from utils.split_and_joint_image import split_and_joint_image
 from huggingface_hub import hf_hub_download
 
 def load_model(
-    pretrained_model_name_or_path: str = "mutou0308/GSASR_paper",
+    pretrained_model_name_or_path: str = "mutou0308/GSASR",
     model_name: str = "EDSR_DIV2K",
     device: str | torch.device = "cuda"
 ):
@@ -28,10 +28,10 @@ def load_model(
     else:
         print(f"loading model from hugginface")
         enc_path = hf_hub_download(
-                repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'encoder.pth')
+                repo_id=pretrained_model_name_or_path, filename=os.path.join('GSASR_paper', model_name, 'encoder.pth')
             )
         dec_path = hf_hub_download(
-                repo_id=pretrained_model_name_or_path, filename=os.path.join(model_name, 'decoder.pth')
+                repo_id=pretrained_model_name_or_path, filename=os.path.join('GSASR_paper', model_name, 'decoder.pth')
             )
 
     enc_weight = torch.load(enc_path, weights_only=True)['params_ema']

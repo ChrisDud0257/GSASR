@@ -208,13 +208,13 @@ We provide three versions of GSASR:
 
 |           Model Backbone           |        Training Dataset|                                       Download                                               | Version|
 |:------------------------:|:----------------------------------------------------------------------------------------------------:|:---:|:---:|
-|EDSR| DIV2K | [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/EDSR_DIV2K)|Enhanced |
-|EDSR| DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/EDSR_DF2K) |Enhanced |
-|RDN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/RDN_DIV2K) |Enhanced|
-|RDN| DF2K|  [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/RDN_DF2K) |Enhanced |
-|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DIV2K) |Enhanced |
-|SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/SWIN_DF2K) |Enhanced|
-|HATL| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/HATL-SA1B) |Ultra Performance|
+|EDSR| DIV2K | [Google Drive](https://drive.google.com/drive/folders/1R6ZCdAd6t_2CCpjCK67F9nag9jitMhI6?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/EDSR_DIV2K)|Enhanced |
+|EDSR| DF2K| [Google Drive](https://drive.google.com/drive/folders/16TV2yJt_lfNqJnATtJnEkHV1KoBuW8ww?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/EDSR_DF2K) |Enhanced |
+|RDN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1guSg28c8gvrTkCvTmNbzqf9vWJfLv58Q?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/RDN_DIV2K) |Enhanced|
+|RDN| DF2K|  [Google Drive](https://drive.google.com/drive/folders/1vkBvsiiNqTFKmPtNjPlqMn_mh_ClUrKE?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/RDN_DF2K) |Enhanced |
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1kVLkOs4KrXlXsPsh0oqvey2dvT6TxqH-?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/SWIN_DIV2K) |Enhanced |
+|SWIN| DF2K| [Google Drive](https://drive.google.com/drive/folders/1ql6dktVUlQFIoPSJkEuvvMPz9TlacMdy?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/SWIN_DF2K) |Enhanced|
+|HATL| SA1B| [Google Drive](https://drive.google.com/drive/folders/1Pn-4JWvlMj50CulmAcBI1Hssiu-6nSYI?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_enhenced_ultra/HATL-SA1B) |Ultra Performance|
 
 Toward the results of our paper, we do not use these tricks (AMP+ROPE+Flash Attention/extra training datasets) for fair comparison.
 
@@ -285,9 +285,9 @@ Download models from the following link.
 
 |           Encoder Backbone           |  Training Dataset |                                             Download                                               | Version|
 |:------------------------:|:---:|:----------------------------------------------------------------------------------------------------:|:---:|
-|EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/EDSR) |Paper Reported|
-|RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/RDN) |Paper Reported|
-|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR_paper/tree/main/SWIN) |Paper (not Reported)|
+|EDSR|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1rSnM1HOBaI6TpfJ0XkXhHZcjjRnS95Sb?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_paper/EDSR) |Paper Reported|
+|RDN|DIV2K| [Google Drive](https://drive.google.com/drive/folders/1xR5JoiLG6Muav-C8XGpE4sTr2bleBxPU?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_paper/RDN) |Paper Reported|
+|SWIN| DIV2K| [Google Drive](https://drive.google.com/drive/folders/1Zv2ijlkyU0UdNz9XDvAu9HHaiUVmhkR0?usp=sharing),  [Hugging Face](https://huggingface.co/mutou0308/GSASR/tree/main/GSASR_paper/SWIN) |Paper (not Reported)|
 
 
 ### Inference for single image
