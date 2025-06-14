@@ -19,7 +19,6 @@
 
 
 ## 🎉  News
-- **2025-06-08:** We update the comparison results among representative/SoTA ASR models and different versions of GSASR.
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
 - **2025-05-30:** The {EDSR, RDN, SWIN, HATL}-based GSASR models are available.
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
