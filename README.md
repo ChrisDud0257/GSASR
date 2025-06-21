@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Generalized and Efficient 2D Gaussian Splatting for Arbitrary-scale Super-Resolution</h1>
 
-[**Du Chen**](https://github.com/ChrisDud0257)<sup>1,2*</sup> · [**Liyi Chen**](https://github.com/mt-cly)<sup>1*</sup> · [**Zhengqiang Zhang**](https://github.com/xtudbxk)<sup>1,2</sup> · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>1,2*</sup>
+[**Du Chen**](https://github.com/ChrisDud0257)<sup>1,2*</sup> · [**Liyi Chen**](https://github.com/mt-cly)<sup>1*</sup> · [**Zhengqiang Zhang**](https://github.com/xtudbxk)<sup>1,2</sup> · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>1,2&dagger;</sup>
 <br>
 
 <sup>1</sup>The Hong Kong Polytechnic University <sup>2</sup>OPPO Research Institute
