@@ -14,7 +14,7 @@ We utilize and modify some codes from the repositories as follows,
 - HAT
   - The arch implementation of HAT is from [HAT](https://github.com/XPixelGroup/HAT). The LICENSE is included as [LICENSE_HAT](LICENSE_HAT).
 - ROPE-ViT
-  - The arch implementation of ROPE is from [ROPE-ViT]([https://github.com/XPixelGroup/HAT](https://github.com/naver-ai/rope-vit)). The LICENSE is included as [LICENSE_ROPE-ViT](LICENSE_ROPE-ViT).
+  - The arch implementation of ROPE is from [ROPE-ViT](https://github.com/XPixelGroup/HAT](https://github.com/naver-ai/rope-vit). The LICENSE is included as [LICENSE_ROPE-ViT](LICENSE_ROPE-ViT).
 
 
 ## References
