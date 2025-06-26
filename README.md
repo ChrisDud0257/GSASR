@@ -1,6 +1,9 @@
 <div align="center">
 <h1>Generalized and Efficient 2D Gaussian Splatting for Arbitrary-scale Super-Resolution</h1>
 
+
+<h1 align="center" style="font-size:48px;"><b>In ICCV 2025</b></h1>
+
 [**Du Chen**](https://github.com/ChrisDud0257)<sup>1,2*</sup> · [**Liyi Chen**](https://github.com/mt-cly)<sup>1*</sup> · [**Zhengqiang Zhang**](https://github.com/xtudbxk)<sup>1,2</sup> · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>1,2&dagger;</sup>
 <br>
 
@@ -8,13 +11,14 @@
 <br>
 *Equal contribution &dagger;Corresponding author &emsp; 
 
+
+
 <a href="https://arxiv.org/abs/2501.06838"><img src="https://img.shields.io/badge/%F0%9F%93%84%20arXiv-2501.06-B31B1B.svg"></a>
 <a href="https://mt-cly.github.io/GSASR.github.io/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project%20Page-GASAR-green.svg" alt='Project Page'></a>
 <a href="https://huggingface.co/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>
 <a href="https://huggingface.co/spaces/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Gradio%20Demo-Huggingface-blue"></a>
 
-<br>
-<h1 align="center" style="font-size:48px;"><b>In ICCV 2025</b></h1>
+
 
 </div>
 
