@@ -13,12 +13,14 @@
 <a href="https://huggingface.co/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>
 <a href="https://huggingface.co/spaces/mutou0308/GSASR"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Gradio%20Demo-Huggingface-blue"></a>
 
-
+<br>
+<h1 align="center" style="font-size:48px;"><b>In ICCV 2025</b></h1>
 
 </div>
 
 
 ## 🎉  News
+- **2025-06-25:** GSASR is accecpted by ICCV 2025. Congratulations! We will modify our final version these days.
 - **2025-06-05:** The online demo with most powerful HATL-based GSASR is released, [click to try it](https://huggingface.co/spaces/mutou0308/GSASR).
 - **2025-05-30:** The {EDSR, RDN, SWIN, HATL}-based GSASR models are available.
 - **2025-01-16:** GSASR [paper](https://arxiv.org/abs/2501.06838) and [project papge](https://mt-cly.github.io/GSASR.github.io/) are released.
