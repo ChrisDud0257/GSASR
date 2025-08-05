@@ -245,7 +245,7 @@ pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https
 python setup_gscuda.py install # gscuda
 cd TrainTestGSASR
 pip install -r requirements.txt
-BASICSR_EXT=True python setup.py develop # basicsr
+BASICSR_EXT=True python setup_basicsr.py develop # basicsr
 ```
 
 We have tested that the versions of CUDA from 11.0 to 12.4 are all OK.
