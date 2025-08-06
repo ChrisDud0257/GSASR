@@ -17,11 +17,15 @@ export CUDA_HOME=/home/notebook/code/personal/S9053766/chendu/cuda-11.8
 Then install the relevant environments :
 ```bash
 git clone https://github.com/ChrisDud0257/GSASR
-cd GSASR/TrainTestGSASR
+cd GSASR
 conda create --name gsasr python=3.10
+conda activate gsasr
+export CUDA_HOME=${path_to_CUDA} ### specify the path to cuda-11.8
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
+python setup_gscuda.py install # gscuda
+cd TrainTestGSASR
 pip install -r requirements.txt
-BASICSR_EXT=True python setup.py develop
+BASICSR_EXT=True python setup_basicsr.py develop # basicsr
 ```
 
 For more installation issues, please refer to the excellent [BasicSR](https://github.com/XPixelGroup/BasicSR) project.
